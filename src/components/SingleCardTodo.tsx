@@ -12,7 +12,7 @@ type props={
 
 const SingleCardTodo = ({todo,id,isDone}:props) => {
   return (
-    <div className='SingleCardTodo'>
+    <div className='SingleCardTodo' key={id}>
         <span className='list-text'>{todo}</span>
         
         <div className="actions">

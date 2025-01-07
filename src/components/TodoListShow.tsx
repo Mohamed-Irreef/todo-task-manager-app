@@ -13,7 +13,7 @@ const TodoListShow = ({todoList,setTodoList}:props) => {
         {
             todoList.map((singleTodo)=>{
                 return(
-                    <SingleCardTodo todo={singleTodo.todo} id={singleTodo.id} isDone={singleTodo.isDone}/>
+                    <SingleCardTodo todo={singleTodo.todo} id={singleTodo.id} isDone={singleTodo.isDone} key={singleTodo.id}/>
                 )
             })
         }
