@@ -1,1 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+}
+form{
+    width: 500px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    border: 1px solid black;
+}
+.head{
+    color: blue;
+    font-size: 30px;
+    text-align: center;
+}
+.input-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    background-color: white;
+    padding: 5px 15px;
+    padding-right: 7px;
+    border-radius: 7px;
+    box-shadow: 0 0 0 1px rgb(175, 175, 175);
+}
+.input-box input{
+    width: 100%;
+    padding: 7px 6px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+input::placeholder{
+    font-size: 15px;
+}
+
+.input-box button{
+    padding: 1px;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px; 
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgba(51, 57, 247, 0.826);
+    color: white;
+}
+.input-box button:hover{
+    background-color: rgba(69, 75, 236, 0.812);
+    transform: scale(0.97);
+    cursor: pointer;
+    color: white;
+    transition: all 0.1s;
+}
+.todo-list-container{
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.SingleCardTodo{
+    height: 50px;
+    width: 100%;
+    padding: 5px 20px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+}
+.SingleCardTodo .list-text{
+    font-size: 17px;
+}
+.SingleCardTodo .actions{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    gap: 15px;
+    font-size: 30px;
+}
+.actions button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.actions button:hover{
+    background-color: rgb(103, 103, 249);
+}
+.actions .del:hover{
+    color: rgb(255, 75, 75);
+}
+.actions .tick:hover{
+    color: rgb(154, 255, 154);
+}
