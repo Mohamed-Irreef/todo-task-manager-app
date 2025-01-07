@@ -5,15 +5,17 @@ import SingleCardTodo from './SingleCardTodo';
 interface props{
     todoList: todo[];
     setTodoList:React.Dispatch<React.SetStateAction<todo[]>>;
+    deleteHandler:(id:number)=>void;
+    
 }
 
-const TodoListShow = ({todoList,setTodoList}:props) => {
+const TodoListShow = ({todoList,setTodoList, deleteHandler}:props) => {
   return (
     <div className='todo-list-container'>
         {
-            todoList.map((singleTodo)=>{
+            todoList.map((singleTodo,index)=>{
                 return(
-                    <SingleCardTodo todo={singleTodo.todo} id={singleTodo.id} isDone={singleTodo.isDone} key={singleTodo.id}/>
+                    <SingleCardTodo todo={singleTodo.todo} id={singleTodo.id} isDone={singleTodo.isDone} key={singleTodo.id} index={index}  deleteHandler={ deleteHandler}   />
                 )
             })
         }

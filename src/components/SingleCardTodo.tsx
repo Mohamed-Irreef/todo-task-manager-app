@@ -8,17 +8,20 @@ type props={
     todo: string;
     id:number;
     isDone:boolean;
+    index:number;
+    deleteHandler:(id:number)=>void;
+    
 }
 
-const SingleCardTodo = ({todo,id,isDone}:props) => {
+const SingleCardTodo = ({todo,id,isDone,index, deleteHandler}:props) => {
   return (
     <div className='SingleCardTodo' key={id}>
-        <span className='list-text'>{todo}</span>
+        <span className='list-text'>{index+1}. <span className='list-text'>{todo}</span></span>
         
         <div className="actions">
             <span><button className='edit'><FaEdit /></button></span>
-            <span><button className='del'><MdDelete /></button></span>
-            <span><button className='tick'><MdDoneOutline /></button></span>
+            <span><button className='del' onClick={()=>{deleteHandler(id)}}><MdDelete /></button></span>
+            <span><button className='tick' ><MdDoneOutline /></button></span>
         </div>
     </div>
   )
